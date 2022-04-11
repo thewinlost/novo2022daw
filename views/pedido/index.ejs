@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem dos usuários</title>
+    <title>Listagem dos pedidos</title>
 </head>
 <body>
-    <h1>Listagem de usuários</h1>
+    <h1>Listagem de pedidos</h1>
     <p>
         <a href="/add">Adicionar</a>
     </p>
@@ -19,27 +19,28 @@
         <tr>
             <th>Id</th>
             <th>Nome</th>
-            <th>Email</th>
-            <th>Senha</th>
-            <th>Foto</th>
+            <th>Telefone</th>
+            <th>Cpf</th>
+            <th>Datapedido</th>
+            <th>Dataentrega</th>
             <th>Editar</th>
             <th>Excluir</th>
         </tr>
-        <% Usuarios.forEach((usuario)=>{ %>
+        <% Pedidos.forEach((pedido)=>{ %>
         <tr>
-            <td><%=usuario.id%></td>
-            <td><%=usuario.nome%></td>
-            <td><%=usuario.email%></td>
-            <td><%=usuario.senha%></td>
+            <td><%=pedido.id%></td>
+            <td><%=pedido.nome%></td>
+            <td><%=pedido.telefone%></td>
+            <td><%=pedido.cpf%></td>
+            <td><%=pedido.datapedido%></td>
+            <td><%=pedido.dataentrega%></td>
+            
+            
             <td>
-                <img src="/fotos/<%=usuario.foto%>" 
-                    width="80px" alt="foto do usuário">
+                <a href="/edt/<%=pedido.id%>">Editar</a>
             </td>
             <td>
-                <a href="/edt/<%=usuario.id%>">Editar</a>
-            </td>
-            <td>
-                <a href="/del/<%=usuario.id%>">Deletar</a>
+                <a href="/del/<%=pedido.id%>">Deletar</a>
             </td>
         </tr>
         <% }) %>

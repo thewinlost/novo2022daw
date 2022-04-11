@@ -1,11 +1,16 @@
+/*jshint esversion:8*/
 const sequelize = require("sequelize");
 
 const dbconfig = require("./dbconfig");
 
 const conexao = new sequelize(dbconfig);
 
-const Usuario = require("../models/Usuario");
+const Pedido = require("../models/Pedido");
 
-Usuario.init(conexao);
+Pedido.init(conexao);
+
+const Bolo = require("../models/Bolo");
+
+Bolo.init(conexao);
 
 module.exports = conexao;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem dos bolos</title>
+</head>
+<body>
+    <h1>Listagem de bolos/h1>
+    <p>
+        <a href="/add">Adicionar</a>
+    </p>
+    <form method="post">
+        <input type="text" name="pesquisar">
+        <input type="submit" value="Pesquisar">
+    </form>
+    <table> 
+        <tr>
+            <th>Id</th>   
+            <th>Massa</th>
+            <th>Recheioum</th>
+            <th>Recheiodois</th>
+            <th>Kilos</th>
+            <th>Cobertura</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        <% Bolos.forEach((bolo)=>{ %>
+        <tr>
+            <td><%=bolo.id%></td>
+            <td><%=bolo.massa%></td>
+            <td><%=bolo.recheioum%></td>
+            <td><%=bolo.recheiodois%></td>
+            <td><%=bolo.kilos%></td>
+            <td><%=bolo.cobertura%></td>
+            
+            
+            <td>
+                <a href="/edt/<%=bolo.id%>">Editar</a>
+            </td>
+            <td>
+                <a href="/del/<%=bolo.id%>">Deletar</a>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

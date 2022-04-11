@@ -3,30 +3,30 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("pedidos", {
+    await queryInterface.createTable("bolos", {
       id: {
         type: Sequelize.BIGINT,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
-      nome: {
+      massa: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      dataentrega: {
+      recheioum: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      datapedido: {
+      recheiodois: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      telefone: {
+      kilos: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cpf: {
+      cobertura: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -34,6 +34,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("pedidos");
+    await queryInterface.dropTable("bolos");
   },
 };
