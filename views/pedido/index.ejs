@@ -7,9 +7,9 @@
     <title>Listagem dos pedidos</title>
 </head>
 <body>
-    <h1>Listagem de pedidos</h1>
+    <h1>Listagem de pedidos </h1>
     <p>
-        <a href="/add">Adicionar</a>
+        <a href="/pedido/add">Adicionar</a>
     </p>
     <form method="post">
         <input type="text" name="pesquisar">
@@ -37,10 +37,10 @@
             
             
             <td>
-                <a href="/edt/<%=pedido.id%>">Editar</a>
+                <a href="/pedido/edt/<%=pedido.id%>">Editar</a>
             </td>
             <td>
-                <a href="/del/<%=pedido.id%>">Deletar</a>
+                <a href="/pedido/del/<%=pedido.id%>">Deletar</a>
             </td>
         </tr>
         <% }) %>

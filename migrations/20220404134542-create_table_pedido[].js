@@ -15,11 +15,11 @@ module.exports = {
         allowNull: false,
       },
       recheioum: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       recheiodois: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       kilos: {

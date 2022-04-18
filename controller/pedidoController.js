@@ -13,7 +13,7 @@ async function add(req, res) {
      cpf, 
      dataentrega, 
      datapedido }).then((pedido) => {   ///talvez tenha q mudar
-    res.redirect("/");
+    res.redirect("/pedido");
   });
 }
 

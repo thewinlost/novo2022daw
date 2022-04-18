@@ -13,7 +13,7 @@ async function add(req, res) {
      recheiodois, 
      kilos, 
      cobertura }).then((bolo) => {   ///talvez tenha q mudar
-    res.redirect("/");
+    res.redirect("/bolo");
   });
 }
 
@@ -41,7 +41,7 @@ async function list(req, res) {
 async function listfiltro(req, res) {
   let pesquisar = req.body.pesquisar;
   let bolos = await Bolo.findAll({
-    where: { nome: { [Op.like]: "%" + pesquisar + "%" } },
+    where: { massa: { [Op.like]: "%" + pesquisar + "%" } },
   });
   res.render("bolo/index.ejs", { Bolos: bolos });
 }

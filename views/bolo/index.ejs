@@ -7,9 +7,9 @@
     <title>Listagem dos bolos</title>
 </head>
 <body>
-    <h1>Listagem de bolos/h1>
+    <h1>Listagem de bolos</h1>
     <p>
-        <a href="/add">Adicionar</a>
+        <a href="/bolo/add">Adicionar</a>
     </p>
     <form method="post">
         <input type="text" name="pesquisar">
@@ -37,10 +37,10 @@
             
             
             <td>
-                <a href="/edt/<%=bolo.id%>">Editar</a>
+                <a href="/bolo/edt/<%=bolo.id%>">Editar</a>
             </td>
             <td>
-                <a href="/del/<%=bolo.id%>">Deletar</a>
+                <a href="/bolo/del/<%=bolo.id%>">Deletar</a>
             </td>
         </tr>
         <% }) %>
